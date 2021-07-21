@@ -15,7 +15,7 @@ $maxWidth: 1210;
 
 body{
 	font-family: 'Montserrat';
-	font-size: 14px;
+	font-size: 16px;
 	color: white;
 	padding: 0;
 	margin: 0;
@@ -1449,9 +1449,13 @@ i{
 	.third-wrap .container .advantages .advantages__content{
 
 		flex-direction: column;
+		width: auto;	
+		align-items: flex-start;
 
 		.advantage{
 			margin-top: 20px;
+
+			width: auto;	
 		}
 	}
 
@@ -1459,10 +1463,41 @@ i{
 
 @media screen and (max-width: 1070px) {
 
+	.second-wrap .container .know .know__left{
+
+		width: auto;	
+	}
+
+	.razer{
+
+		display: none;	
+	}
+
 	.container{
 		width: 900px;
 	}
 
+	.oto .container .oto__left img{
+
+		width: 100%;
+		max-width: 400px;
+		height: auto;
+	}
+
+	.btn{
+
+		width: 100%;	
+
+		.down__btn{
+
+			width: 100%;	
+		}
+
+		&:after{
+
+			width: 100%;	
+		}
+	}
 
 	.header .adress{
 		display: none;
@@ -1484,8 +1519,14 @@ i{
 
 	.first-wrap .container .first__screen .first__screen__right{
 
-		transform: scale(.8);
+		
 		margin-bottom: -100px;
+
+		img{
+			width: 100%;
+			max-width: 500px;
+			height: auto;
+		}
 	}
 
 	.first-wrap .container .first__screen .first__screen__left{
@@ -1495,6 +1536,7 @@ i{
 		text-align: center;
 		justify-content: center;
 		align-items: center;
+		width: auto;
 	}
 
 	.first-wrap .container .first__screen .first__screen__left .btn{
@@ -1527,13 +1569,27 @@ i{
 		text-align: center;
 	}
 
+	.second-wrap .container .know .know__left h2{
+
+		text-align: left	;
+	}
+
 	.fourth-wrap .container .connect{
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 
+		width: auto;	
+
+		.connect__left{
+
+			width: auto;	
+
+
+		}
+
 		iframe{
-			width: 100%;
+			width: 600px;
 		}
 	}
 
@@ -1544,17 +1600,27 @@ i{
 
 @media screen and (max-width: 900px){
 
-	.oto .container .oto__right .form,
+	.oto .container .oto__right .form{
+
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: auto;	
+		margin: 0 auto;	
+	}
+
 	.oto .container .oto__right .form form{
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-
+		width: 100%;	
+		margin: 0 auto;	
 	}
 
-	.oto .container .oto__right .form form .input input{
+	.oto .container .oto__right .form form .input input,
+	.oto .container .oto__right .form form .input{
 		margin-bottom: 30px;
-		width: 500px;
+		width: 90%;	
 		margin-right: 0;
 	}
 
@@ -1570,17 +1636,7 @@ i{
 		display: none;
 	}
 
-	.btn{
-		width: 400px;
-
-		.down__btn{
-			width: 400px;
-		}
-
-		&:after{
-			width: 400px;
-		}
-	}
+	
 
 	.second-wrap .container .know .know__right .service .buttons{
 		flex-direction: column;
@@ -1589,20 +1645,6 @@ i{
 		margin-top: 30px;
 	}
 
-	.oto .container .oto__right .form .btn{
-
-		width: 500px;
-
-		.down__btn{
-
-			width: 500px;
-		}
-
-		&:after{
-
-			width: 500px;
-		}
-	}
 
 	.second-wrap .container .know .know__right{
 
@@ -1620,7 +1662,16 @@ i{
 
 	.second-wrap .container .know .know__right .service .image img{
 
-		width: 400px;
+		max-width: 400px;
+		width: 100%;	
+		height: auto;	
+	}
+
+	.second-wrap .container .know .know__right .service .image .blur{
+		max-width: 200px;	
+		max-height: 200px;	
+		width: 100%;	
+		height: 100%;	
 	}
 
 	.second-wrap .container .know .know__right .service .image{
@@ -1694,5 +1745,143 @@ i{
 
 	.first-wrap .container .header .phone{
 		display: none;
+	}
+
+	.first-wrap .container .header .emblem i{
+		font-size: 50px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	body{
+		line-height: 1.5;
+		font-size: 16px;	
+	}
+
+	.first-wrap .container .first__screen .first__screen__right{
+
+		&:after,
+		&:before{
+			display: none;	
+		}
+
+		.blur{
+			width: 100%;	
+			max-width: 420px;	
+			height: 100%;	
+			max-height: 420px;	
+		}
+	}
+
+	.fourth-wrap .container .reviews .reviews__content .reviews__slider .review .date{
+		display: none;	
+	}
+
+	.fourth-wrap .container .reviews .reviews__content .reviews__slider .review .man{
+		width: auto;	
+		padding: 30px;	
+		padding-top: 0;	
+	}
+
+	.fourth-wrap .container .reviews .reviews__content .reviews__slider .review{
+
+		height: auto;	
+		width: auto;	
+		text-align: center;
+
+		p{
+			font-size: 16px;	
+
+		}
+	}
+
+	.second-wrap .container .know .know__right .service .service__label,
+	.second-wrap .container .know .know__right .service .service__description{
+
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+	}
+
+	.second-wrap .container .services{
+
+		.arrow{
+			display: none;	
+		}
+
+		.btn{
+
+			.arrow{
+
+				display: block;	
+			}
+		}
+	}
+
+	.third-wrap .container .workers .workers__content .barbers .barber{
+
+		margin-bottom: 20px;	
+
+		width: auto;	
+		text-align: center;
+
+		p{
+			font-size: 17px;	
+		}
+
+		.btn{
+			margin-top: 20px;	
+		}
+
+		&:before,
+		&:after{
+			display: none;	
+		}
+	}
+
+	.fourth-wrap .container .connect .connect__right{
+
+		iframe{
+
+			width: 100%;
+		}
+	}
+
+	.fourth-wrap .container .connect .connect__left{
+
+			text-align: center;
+
+		h2{
+			text-align: left;
+		}
+
+		.adress__phone{
+
+			flex-direction: column;
+			font-size: 18px;	
+			text-align: center;
+
+			.adress,
+			.phone{
+				
+				width: auto;	
+				margin-top: 20px;	
+				text-align: center;
+			}
+		}
+
+		.social__medias{
+
+			width: auto;	
+		}
+	}
+}
+
+@media screen and (max-width: 400px){
+
+	.first-wrap .container .first__screen .first__screen__right{
+		display: none;	
 	}
 }
