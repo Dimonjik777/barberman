@@ -68,12 +68,65 @@ i{
 }
 
 .btn{
-	transition: all ease 0.5s;
+	transition: 0.5s all ease 0.5s;
 	position: relative;
 	width: 300px;
 	display: block;
 	color: black;
 	font-size: 24px;
+
+	&.active{
+
+		.button{
+		transition: all ease 0.5s;
+		display: flex;
+		border-radius: 5px;
+		align-items: center;
+		position: relative;
+		z-index: 2;
+		justify-content: center;
+		background: linear-gradient( to bottom right, rgba(231, 196, 105, 1), rgba(254, 219, 129, 1));
+
+		p{
+			margin-right: 20px;
+			margin-left: 20px;
+			font-weight: 700;
+		}
+	}
+
+	.down__btn{
+		width: 300px;
+		height: 77px;
+		background: #9E8238;
+		border-radius: 5px;
+		position: relative;
+		top: -65px;
+	}
+
+	&:after{
+		transition: all ease 0.5s;
+		content: '';
+		display: block;
+		position: absolute;
+		width: 300px;
+		height: 77px;
+		top: 15px;
+		background: rgba(231, 195, 104, 0.5);
+		filter: blur(20px);
+	}
+
+	&:hover{
+
+		.button{
+			transform: translateY(11px);
+		}
+
+		&:after{
+			opacity: 0;
+		}
+	}
+
+	}
 
 	.button{
 		transition: all ease 0.5s;
@@ -157,11 +210,25 @@ i{
 .adress{
 	width: 160px;
 	text-align: right;
+
+	transform: translate(-20px, 0);
+	opacity: 0;
+	transition: 0.5s all ease 1s;
+
+	&._active{
+
+	transform: translate(0px, 0);
+	opacity: 1;
+
+	}
+
 	.city{
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
 		font-weight: 700;
+
+
 
 		i{
 			font-size: 35px;
@@ -173,6 +240,17 @@ i{
 .phone{
 	width: 290px;
 	text-align: right;
+
+	transform: translate(-20px, 0);
+	opacity: 0;
+	transition: 0.5s all ease 1.5s;
+
+	&._active{
+
+	transform: translate(0px, 0);
+	opacity: 1;
+
+	}
 
 	.number{	
 		display: flex;
@@ -303,9 +381,30 @@ i{
 				i{
 					margin-right: 10px;
 					font-size: 60px;
+					transform: translate(-20px, 0);
+					opacity: 0;
+					transition: 0.5s all ease;
+
+					&._active{
+
+					transform: translate(0px, 0);
+					opacity: 1;
+
+					}
 				}
 
 				.title{
+
+					transform: translate(-20px, 0);
+					opacity: 0;
+					transition: 0.5s all ease 0.5s;
+
+					&._active{
+
+					transform: translate(0px, 0);
+					opacity: 1;
+
+					}
 
 					p:first-child{
 						font-weight: 700;
@@ -323,6 +422,8 @@ i{
 			li{
 				display: inline-block;
 				font-weight: 700;
+				transform: translate(-120%, 0);
+				opacity: 0;
 			
 				a{
 					transition: 0.3s all ;
@@ -338,6 +439,31 @@ i{
 				}
 				}
 			}
+
+			&._active{
+
+				li{
+
+					transform: translate(0);
+					opacity: 1;
+
+					@for $var from 1 to 6 {
+
+						$delay: $var * 0.3;
+						&:nth-child(#{$var}) {
+
+							@if $var == 1 {
+
+								transition: 0.5s all ease 0s;
+							} @else {
+
+								transition: 0.5s all ease #{$delay + s};
+							}
+						}
+					}
+
+				}
+			}
 		}
 
 		.first__screen{
@@ -350,8 +476,40 @@ i{
 			.first__screen__left{
 				width: 500px;
 
+				h1{
+					transform: translate(-20%, 0);
+					opacity: 0;
+					transition: 1s all ease;
+
+					&._active{
+
+						opacity: 1;
+						transform: translate(0);
+					}
+				}
+
 				p{
 					font-size: 24px;
+
+					transform: translate(-20%, 0);
+					opacity: 0;
+					transition: 1s all ease 0.2s;
+
+					&._active{
+
+						opacity: 1;
+						transform: translate(0);
+					}
+				}
+
+				.btn{
+
+
+
+					p{
+						opacity: 1;
+						transform: translate(0);
+					}
 				}
 			}
 
@@ -366,6 +524,16 @@ i{
 					max-width: 600px;
 					position: relative;
 					z-index: 2;
+
+					transform: translate(0, 10%);
+					transition: 0.5s all ease;
+					opacity: 0;
+
+					&._active{
+
+						transform: translate(0);
+						opacity: 1;
+					}
 				}
 
 				.blur{
@@ -378,6 +546,16 @@ i{
 					left: 15%;
 					top: 20%;
 					filter: blur(50px);
+
+					transform: translate(0, 10%);
+					transition: 0.5s all ease 0.5s;
+					opacity: 0;
+
+					&._active{
+
+						transform: translate(0);
+						opacity: 1;
+					}
 				}
 
 				&:after{
@@ -638,6 +816,10 @@ i{
 					.wrap{
 						transform: translate(0px, 150px);
 						transition: 0.5s all ease;
+
+						p{
+							width: 80%;
+						}
 					}
 
 					.btn{
