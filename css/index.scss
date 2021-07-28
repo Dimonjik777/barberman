@@ -188,6 +188,17 @@ i{
 			display: flex;
 			justify-content: center;
 
+			transform: translate(0, 40px);
+			opacity: 0;
+			transition: 0.5s all ease;
+
+			&._active{
+
+				transform: translate(0);
+				opacity: 1;
+			}
+
+
 			.navigate{
 				width: 250px;
 				display: flex;
@@ -313,8 +324,17 @@ i{
 
 	&.first-razer{
 		width: 235px;
+		left: 60%;
+		top: 70%;
+		transform: rotate(-45deg);
+		transition: 1s all ease;
+
+		&._active{
+		transform: rotate(0deg);
 		left: 40%;
 		top: 70%;
+		}
+
 	}
 
 	&.second-razer{
@@ -504,6 +524,16 @@ i{
 
 				.btn{
 
+					transform: translate(-40px, 0);
+					opacity: 0;
+					transition: 1s all ease 0.4s;
+
+					&._active{
+
+						transform: translate(0);
+						opacity: 1;
+					}
+
 
 
 					p{
@@ -613,11 +643,29 @@ i{
 				width: 440px;
 
 				h2{
+
+					transition: 0.5s all ease;
+					transform: translate(-40px, 0);
+					opacity: 0;
+
+					&._active{
+						transform: translate(0);
+						opacity: 1;
+					}
 					
 				}
 
 				p{
 					font-size: 20px;
+
+					transition: 0.5s all ease 0.2s;
+					transform: translate(-40px, 0);
+					opacity: 0;
+
+					&._active{
+						transform: translate(0);
+						opacity: 1;
+					}
 				}
 			}
 
@@ -627,6 +675,16 @@ i{
 				display: flex;
 				align-items: center;
 				justify-content: center;
+
+				transition: 1s all ease;
+				opacity: 0;
+				transform: translate(0, 40px);
+
+				&._active{
+
+					transform: translate(0);
+					opacity: 1;
+				}
 
 				.arrow:first-child{
 					transform: rotate(180deg);
@@ -776,6 +834,34 @@ i{
 			justify-content: space-between;
 			padding-top: 100px;
 
+			.first__arrow__services{
+
+				transition: 0.5s all ease;
+				position: relative;
+				opacity: 0;
+				left: -40px;
+
+				&._active{
+
+					left: 0;
+					opacity: 1;
+				}
+			}
+
+			.last__arrow__services{
+
+				transition: 0.5s all ease 0.6s;
+				position: relative;
+				opacity: 0;
+				left: -40px;
+
+				&._active{
+
+					left: 0;
+					opacity: 1;
+				}
+			}
+
 			.arrow{
 
 					&:before{
@@ -811,7 +897,39 @@ i{
 					box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 					cursor: pointer;
 					overflow: hidden;
-					transition: background 2s ease;
+
+					&:nth-child(1){
+						transform: translate(0, 40px);
+						opacity: 0;
+						transition: 1s all ease;
+
+						&._active{
+							transform: translate(0);
+							opacity: 1;
+						}
+					}
+
+					&.hair{
+						transform: translate(0, 40px);
+						opacity: 0;
+						transition: 1s all ease 0.2s;
+
+						&._active{
+							transform: translate(0);
+							opacity: 1;
+						}
+					}
+
+					&.gray{
+						transform: translate(0, 40px);
+						opacity: 0;
+						transition: 1s all ease 0.4s;
+
+						&._active{
+							transform: translate(0);
+							opacity: 1;
+						}
+					}
 
 					.wrap{
 						transform: translate(0px, 150px);
@@ -856,16 +974,19 @@ i{
 					&:nth-child(1){
 						background-image: linear-gradient( to top, #000, rgba(118, 118, 118, 0)), url('../source/img/Оформление бороды.webp');
 						background-size: cover;
+
 					}
 
 					&:nth-child(2){
 						background-image: linear-gradient( to top, #000, rgba(118, 118, 118, 0)), url('../source/img/Укладка волос.webp');
 						background-size: cover;
+
 					}
 
 					&:nth-child(3){
 						background-image: linear-gradient( to top, #000, rgba(118, 118, 118, 0)), url('../source/img/Тонировка седины.webp');
 						background-size: cover;
+
 					}
 
 					h3{
